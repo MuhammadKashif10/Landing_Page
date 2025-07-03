@@ -1,0 +1,230 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* --- Enhanced About, Team, Careers Sections --- */
+.enhanced-section {
+  padding: 80px 0;
+  background: #f9f9fb;
+  animation: fadeInUp 0.8s;
+}
+
+.about-content, .team-content, .careers-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.about-text, .team-text, .careers-text {
+  flex: 1;
+}
+
+.about-image, .team-image, .careers-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img, .team-image img, .careers-image img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.12);
+  animation: float 3s infinite;
+}
+
+.about-section h2, .team-section h2, .careers-section h2 {
+  font-size: 2.2rem;
+  color: #4f3cc9;
+  margin-bottom: 18px;
+}
+
+.about-section p, .team-section p, .careers-section p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .about-content, .team-content, .careers-content {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+  .about-image img, .team-image img, .careers-image img {
+    width: 220px;
+  }
+}
+
+/* --- Enhanced Blog, Portfolio, Case Studies, Support Sections --- */
+.blog-content, .portfolio-content, .case-studies-content, .support-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.blog-text, .portfolio-text, .case-studies-text, .support-text {
+  flex: 1;
+}
+
+.blog-image, .portfolio-image, .case-studies-image, .support-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-image img, .portfolio-image img, .case-studies-image img, .support-image img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.12);
+  animation: float 3s infinite;
+}
+
+.blog-section h2, .portfolio-section h2, .case-studies-section h2, .support-section h2 {
+  font-size: 2.2rem;
+  color: #4f3cc9;
+  margin-bottom: 18px;
+}
+
+.blog-section p, .portfolio-section p, .case-studies-section p, .support-section p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .blog-content, .portfolio-content, .case-studies-content, .support-content {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+  .blog-image img, .portfolio-image img, .case-studies-image img, .support-image img {
+    width: 220px;
+  }
+}
